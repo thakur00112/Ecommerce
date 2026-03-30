@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #F97316;
+  --secondary: #22C55E;
+  --bg-main: #F8FAFC;
+  --bg-sidebar: #FFFFFF;
+  --text-main: #1E293B;
+  --text-dim: #64748B;
+  --border: #E2E8F0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+}
+
+.auth-card {
+  @apply bg-white p-8 rounded-2xl shadow-xl transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-[#F97316] text-white px-6 py-2.5 rounded-xl font-medium transition-all duration-300 hover:bg-[#EA580C] hover:shadow-lg disabled:opacity-50;
+}
+
+.table-container {
+  @apply overflow-x-auto bg-white rounded-2xl shadow-sm border border-slate-100;
+}
+
+th {
+  @apply px-6 py-4 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider bg-slate-50 border-b border-slate-100;
+}
+
+td {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-slate-700 border-b border-slate-50;
+}
+
+.sidebar-link {
+  @apply flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 text-slate-600 hover:bg-orange-50 hover:text-orange-600;
+}
+
+.sidebar-link.active {
+  @apply bg-orange-600 text-white shadow-lg shadow-orange-200;
+}
